@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Hello maria"
-/etc/init.d/mariadb start
+/etc/script_bash_mariadb.d/mariadb start
 
 if [ -d "/var/lib/mysql/$MRDB_NAME" ]
 then
@@ -25,6 +25,6 @@ echo "CREATE DATABASE IF NOT EXISTS $MRDB_NAME; GRANT ALL ON $MRDB_NAME.* TO '$M
 
 fi
 
-/etc/init.d/mariadb stop
+/etc/script_bash_mariadb.d/mariadb stop
 
 exec "$@"
