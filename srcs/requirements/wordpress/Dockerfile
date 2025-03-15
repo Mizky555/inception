@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:bullseye
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y php php-fpm php-mysql wget curl
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
